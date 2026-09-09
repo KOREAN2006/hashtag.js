@@ -10,6 +10,7 @@ DOM 데이터 바인딩과 데이터 유효성 검사를 위한 라이브러리
 <html>
   <head>
     <script src="https://unpkg.com/@clockfire/hashtag.js"></script>
+    <!-- 672바이트 크기로 head 태그에 걱정 없이 배치 -->
   </head>
   <body>
     <p>1부터 10000 중 <span class="#number">0</span>보다 큰 숫자 필요</p>
