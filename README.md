@@ -49,9 +49,10 @@ DOM 데이터 바인딩과 데이터 유효성 검사를 위한 라이브러리
 ```
 <span class="#1"></span>
 <div class="#_"></div>
-<span class="#-_- #2763"></span> /* 두 개 이상 설정하면 두 변경 다 적용 */
+<span class="#-_- #2763"></span> /* 두 개 이상 설정하면 설정된 변경 전부 반영 */
 const a = newHashtag("#1");
 const b = newHashtag(Number.isInteger); /* 첫 undefined 이후 정수만 입력 가능 */
 const c = newHashtag(() => Math.random() < 0.5, '_'); /* 50% 확률로 값이 바뀌는 함수 */
 const d = { e: newHashtag("#eee"), f: newHashtag("#fff"), g: [ newHashtag("#g0g"), newHashtag("#g1g") ] }; /* 데이터 구조의 말단에 적용 */
+const optimization = newHashtag("-_-", (input, before) => `${input}` !== `${before}`);
 ```
